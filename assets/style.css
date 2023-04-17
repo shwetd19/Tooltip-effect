@@ -1,17 +1,11 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body{
     height: 100vh;
-    font-family: "Open Sans", sans-serif; 
+    /* font-family: "Open Sans", sans-serif;  */
 }
 .profile{
     position: relative;
     width: 60px;
-    margin: 0 1em;
+    /* margin: 0 1em; */
     height: 60px;
     border-radius: 50%;
     background: url(assets/8.jpeg);
@@ -26,7 +20,7 @@ body{
     box-shadow: 0 0 0 4px #fff, 0 0 0 5px #d10fd8;
 }
 .content{
-    bottom: 75px;
+    /* bottom: 75px; */
     min-width: 400px;
     background-color: #f9f9f9;
     border: 1px solid #ccc;
@@ -43,15 +37,7 @@ body{
     border-radius: 50%;
     object-fit: cover;
 }
-.content .header .infos .name{
-    color: #333;
-}
-.content .header .infos .title{
-    color: #969696;
-}
-.content .body p{
-    color: #272727;
-}
+
 .profile:hover .content{
     visibility: visible;
     opacity: 1;
