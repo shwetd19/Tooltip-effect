@@ -1,0 +1,38 @@
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.slider{
+    height: 250px;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    display: grid;
+    place-items: center;
+}
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-250px * 5));
+    }
+}
+
+.slide-track{
+    display: flex;
+    width: calc(250px * 10);
+    animation: scroll 40s linear infinite;
+}
+.slide{
+    height: 200px;
+    width: 250px;
+    align-items: center;
+    padding: 15px;
+    /* perspective: 100px; */
+}
+img{
+    width: 100%;
+}

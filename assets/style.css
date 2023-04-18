@@ -1,45 +1,64 @@
-body{
-    height: 100vh;
-    /* font-family: "Open Sans", sans-serif;  */
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
 }
-.profile{
-    position: relative;
-    width: 60px;
-    /* margin: 0 1em; */
-    height: 60px;
-    border-radius: 50%;
-    background: url(assets/8.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #246df5;
-    transition: 0.2s;
-}
-.profile:hover{
-    box-shadow: 0 0 0 4px #fff, 0 0 0 5px #d10fd8;
-}
-.content{
-    /* bottom: 75px; */
-    min-width: 400px;
-    background-color: #f9f9f9;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: 0.5s;
-}
-.content .header img{
-    grid-column: 1/2;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    object-fit: cover;
+.profile {
+  position: relative;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  /* box-shadow: 0 0 0 4px #fff, 0 0 0 5px #246df5; */
+  transition: 0.2s;
 }
 
-.profile:hover .content{
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(-15%) translateY(0px);
+.content {
+  /* bottom: 75px; */
+  max-width: 400px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.profile:hover .content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(-15%) translateY(0px);
+}
+
+ 
+.slider{
+  height: 250px;
+  margin: auto;
+  position: relative;
+  width: 90%;
+  display: grid;
+  place-items: center;
+}
+@keyframes scroll {
+  0%{
+      transform: translateX(0);
+  }
+  100%{
+      transform: translateX(calc(-250px * 5));
+  }
+}
+
+.slide-track{
+  display: flex;
+  width: calc(250px * 10);
+  animation: scroll 20s linear infinite;
+}
+.slide{
+  height: 200px;
+  width: 250px;
+  align-items: center;
+  padding: 15px;
+  /* perspective: 100px; */
+}
+img{
+  width: 100%;
 }
